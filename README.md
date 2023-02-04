@@ -7,7 +7,7 @@ Initial Idea: (*crickets*)
 
 Division of Labor:
 
-Dylan - Rascal and ladies man
+Dylan - Rascal and ladies man fd
 
 Sam - I like hacking 
 
