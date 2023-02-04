@@ -9,7 +9,7 @@ Division of Labor:
 
 Dylan -
 
-Sam - 
+Sam - I like hacking 
 
 Wu - here's Qinghong Wu
 
