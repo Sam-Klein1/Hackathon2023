@@ -7,7 +7,7 @@ Initial Idea: (*crickets*)
 
 Division of Labor:
 
-Dylan -
+Dylan - Rascal and ladies man
 
 Sam - 
 
