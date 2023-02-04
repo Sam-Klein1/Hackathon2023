@@ -9,9 +9,9 @@ Division of Labor:
 
 Dylan - Rascal and ladies man
 
-Sam - 
+Sam - I like hacking 
 
-Wu - 
+Wu - here's Qinghong Wu
 
 Spencer - 
 
