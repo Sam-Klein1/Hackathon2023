@@ -108,6 +108,7 @@ let careerAdviceVerbs = [
    "furthered",
    "improved"
 ]
+<<<<<<< HEAD
 
 //list of Friendship verbs
 let friendVerbs = [
@@ -137,6 +138,61 @@ let friendWords = [
     "lasting"
 ]
 
+=======
+//List of school advice
+let schoolWords = [
+    "study",
+    "procrastinate",
+    "stress",
+    "sleep",
+    "use ChatGPT",
+    "sleep in",
+    "read",
+    "pretend to work",
+    "HELP, I'M STuc..."
+]
+//List of clothing
+let clothingWords = [
+    "shirt",
+    "pants",
+    "shoes",
+    "shorts",
+    "dress"
+]
+//List of clothing adjuctives
+let clothingAdj = [
+    "purple",
+    "red",
+    "blue",
+    "yellow",
+    "green",
+    "lavender",
+    "pink",
+    "fluffy",
+    "silky",
+    "shiny",
+    "stretchy",
+    "spiffy",
+    "pompus",
+    "80's",
+    "tight",
+    "loose"
+]
+//List of life advice words
+let lifeWords = [
+    "sleep",
+    "water drinking",
+    "love",
+    "passive-comments",
+    "conforming",
+    "complacent",
+    "runing... don't stop..",
+    "smile",
+    "bottle up",
+    "complaining",
+    "HELP, I'M TRAPed.."
+]
+>>>>>>> refs/remotes/origin/main
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
@@ -151,7 +207,7 @@ function makeString(){
     console.log(command);
     if(command == "Romantic  Advice"){
         hideOrbs();
-        let randomPhrase = getRandomInt(2);
+        let randomPhrase = getRandomInt(4);
         let randomWord  = romanticWords[getRandomInt(romanticWords.length-1)];
         let randomWord2  = romanticWords[getRandomInt(romanticWords.length-1)]; 
         console.log(randomPhrase);
@@ -163,19 +219,25 @@ function makeString(){
                 output.textContent = "Your admirer " + randomWord + " actively awaits outside your window.";
                 return;
             case 2:
-                output.textContent = "You shall fall head over heel for your " + randomWord + " love in the morning after yonder yester fortnight.";
+                output.textContent = "You shall fall head over heels for your " + randomWord + " love in the morning after yonder yester fortnight.";
                 return;
             case 3:
+<<<<<<< HEAD
                 output.textContent = "You will need to " + randomWord + " to " + randomWord2 ;
                 return;
             
+=======
+                output.textContent = "Thy " + randomWord + " love shall be requited within the next " + getRandomInt(40) + " years.";
+            case 4:
+                output.textContent = "Be wary of those in " + clothingAdj[getRandomInt(15)] + " " + clothingWords[getRandomInt(4)] + ", for one has a secret surprise for you.";
+>>>>>>> refs/remotes/origin/main
         }
         
     }else if(command == "Financial  Advice"){
         output.textContent = "Financial"; 
         hideOrbs();
         let randomPhrase = getRandomInt(4);
-        let randomWord  = financialWords[getRandomInt(financialWords.length-1)];
+        let randomWord  = schoolWords[getRandomInt(financialWords.length-1)];
         randomWord.toLowerCase();
         let randomWord2  = financialWords[getRandomInt(financialWords.length-1)]; 
         randomWord2.toLowerCase();
@@ -191,8 +253,10 @@ function makeString(){
                 output.textContent = "Don't hire a financial advisor, investing in " + randomWord + " will " + randomWord2 + " which will ensure a retirement in your 90s.";
                 return;
             case 3:
-                    output.textContent = "Paying  off your " + randomWord + " is essential in preventing blood sucking debt collectors";
-                    return;
+                output.textContent = "Paying  off your " + randomWord + " is essential in preventing blood sucking debt collectors";
+                return;
+            case 4:
+                output.textContent = "The crypto market, evolving the field of " + randomWord + ", will set you free (of all your money).";
         }
     }else if(command == "Career  Advice"){
         output.textContent = "Career";
@@ -216,15 +280,65 @@ function makeString(){
                 output.textContent = "Finding balance between your" + randomVerb + " and " + randomWord2 + "is crucial for success in your career.";
                 return;
             case 3:
+<<<<<<< HEAD
                 output.textContent = "You are not gonna succeed practice with " +  randomWord2 + " and " + randomVerb + ".";
+=======
+                output.textContent = "Paying  off your " + randomWord + " is essential in preventing blood sucking debt collectors";
+>>>>>>> refs/remotes/origin/main
                 return;
         }
     }else if(command == "Life  Advice"){
         output.textContent = "Life";
         hideOrbs();
+        let randomPhrase = getRandomInt(3);
+        let randomWord  = lifeWords[getRandomInt(lifeWords.length-1)];
+        randomWord.toLowerCase();
+        let randomAdj = clothingAdj[getRandomInt(clothingAdj.length-1)];
+        randomAdj.toLowerCase();
+        let randomClothes = clothingWords[(clothingWords.length-1)];
+        randomClothes.toLowerCase();
+        console.log(randomPhrase);
+        switch(randomPhrase){
+            case 0:
+                output.textContent = "Make sure to " + randomWord + " around others, they need that.";
+                return;
+            case 1:
+                output.textContent = "Next time you " + randomWord + " in " + randomClothes + ", expect a fulfilling day!";
+                return;
+            case 2:
+                output.textContent = "Life is like a Dallas Cowboys game, " + randomWord + " will make it better.";
+                return;
+            case 3:
+                output.textContent = "With enough " + randomWord + ", your day will be brighter!";
+                return;
+        }
     }else if(command == "School  Advice"){
         output.textContent = "School";
         hideOrbs();
+        let randomPhrase = getRandomInt(4);
+        let randomWord  = schoolWords[getRandomInt(schoolWords.length-1)];
+        randomWord.toLowerCase();
+        let randomAdj = clothingAdj[getRandomInt(clothingAdj.length-1)];
+        randomAdj.toLowerCase();
+        let randomClothes = clothingWords[(clothingWords.length-1)];
+        randomClothes.toLowerCase();
+        console.log(randomPhrase);
+        switch(randomPhrase){
+            case 0:
+                output.textContent = "Make sure to " + randomWord + " every school night to prepare for the next day.";
+                return;
+            case 1:
+                output.textContent = "Come next Thursday, fortune befalls those in " + randomAdj + " " + randomClothes + " on campus.";
+                return;
+            case 2:
+                output.textContent = "Plan to " + randomWord + " at least " + getRandomInt(4) + " times next week... you've been warned...";
+                return;
+            case 3:
+                output.textContent = "All the best CS students " + randomWord + " before tests, trust me.";
+                return;
+            case 4:
+                output.textContent = "For academic luck this work, don't forget your " + randomAdj + " " + randomClothes + ", hope you (finally) did laundry this week.";
+        }
     }else if(command == "Friendship Advice"){
         output.textContent = "Friendship";
         hideOrbs();
