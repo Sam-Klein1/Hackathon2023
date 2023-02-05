@@ -16,4 +16,4 @@ Team members: Sam Klein, Dylan Wilmarth, Qinghong Wu, Spencer Thomas.
 ## Honorable mentions
 - Python
 - Flask
-- - Unfortunatly, though seemingly conquered Flask in the early hours of the morning, the platform proved itself formidable. While trying to integrate the wav2lip algorithm, error after error came in and slowly disasembled the platform we had learned a few hours before. Although our final product doesn't contain the python code on Flask, it was a staple of out struggles.
+  - Unfortunatly, though seemingly conquered Flask in the early hours of the morning, the platform proved itself formidable. While trying to integrate the wav2lip algorithm, error after error came in and slowly disasembled the platform we had learned a few hours before. Although our final product doesn't contain the python code on Flask, it was a staple of out struggles.
