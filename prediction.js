@@ -108,6 +108,35 @@ let careerAdviceVerbs = [
    "furthered",
    "improved"
 ]
+
+//list of Friendship verbs
+let friendVerbs = [
+    "bond",
+    "connect",
+    "unite",
+    "socilize",
+    "support",
+    "encourage",
+    "trust",
+    "respect",
+    "strike up",
+    "share",
+    "friended"
+]
+
+let friendWords = [
+    "camaraderie",
+    "companionship",
+    "affinity",
+    "rapport",
+    "loyalty",
+    "mutual support",
+    "mutual repsect",
+    "closeness",
+    "acceptance",
+    "lasting"
+]
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
@@ -136,6 +165,10 @@ function makeString(){
             case 2:
                 output.textContent = "You shall fall head over heel for your " + randomWord + " love in the morning after yonder yester fortnight.";
                 return;
+            case 3:
+                output.textContent = "You will need to " + randomWord + " to " + randomWord2 ;
+                return;
+            
         }
         
     }else if(command == "Financial  Advice"){
@@ -174,17 +207,17 @@ function makeString(){
         console.log(randomPhrase);
         switch(randomPhrase){
             case 0:
-                output.textContent = "Be sure to participate in company " + randomWord + " in order to  " + randomWord2 + " leading to economic collapse.";
+                output.textContent = "Success in a career is not just about " + randomWord + " but it's not also about " + randomWord2 + ".";
                 return;
             case 1:
-                output.textContent = "Always bet on " + randomWord + " multiplying your money twentytwofold.";
+                output.textContent = "Your career is a" + randomWord2 + "not just a " + randomWord + " and it's up to you to chart " + randomWord + ".";
                 return;
             case 2:
-                output.textContent = "Don't hire a financial advisor, investing in " + randomWord + " will " + randomWord2 + " which will ensure a retirement in your 90s.";
+                output.textContent = "Finding balance between your" + randomVerb + " and " + randomWord2 + "is crucial for success in your career.";
                 return;
             case 3:
-                    output.textContent = "Paying  off your " + randomWord + " is essential in preventing blood sucking debt collectors";
-                    return;
+                output.textContent = "You are not gonna succeed practice with " +  randomWord2 + " and " + randomVerb + ".";
+                return;
         }
     }else if(command == "Life  Advice"){
         output.textContent = "Life";
@@ -195,6 +228,35 @@ function makeString(){
     }else if(command == "Friendship Advice"){
         output.textContent = "Friendship";
         hideOrbs();
+        let randomPhrase = getRandomInt(6);
+        let randomWord  = friendVerbs[getRandomInt(friendVerbs.length-1)];
+        randomWord.toLowerCase();
+        let randomWord2  = friendVerbs[getRandomInt(friendVerbs.length-1)];
+        randomWord2.toLowerCase();
+        let randomVerb  = friendWords[getRandomInt(friendWords.length-1)]; 
+        randomVerb.toLowerCase();
+        console.log(randomPhrase);
+        switch(randomPhrase){
+            case 0:
+                output.textContent = "friendship will be like " + randomVerb + " and " + randomWord + ".";
+                return;
+            case 1:
+                output.textContent = "You substain friendship through your " + randomVerb + ".";
+                return;
+            case 2:
+                output.textContent = "Why would you maintain friendship through " + randomVerb + " and practice with " + randomWord2;         
+                return;
+            case 3:
+                output.textContent = "A true friend is someone who brings" + randomVerb + "and " + randomWord + ".";
+                return;
+            case 4:
+                output.textContent = "Friendship is a"  + randomVerb  + " and " + randomWord2 + " that lasts a lifetime.";
+                return;
+            case 5:
+                output.textContent = "Friendship is not about " + randomWord + " and not about " + randomVerb + ".";
+                return;
+            
+        }
     }
 } 
 
