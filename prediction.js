@@ -261,7 +261,7 @@ function makeString(){
     }else if(command == "Career  Advice"){
         output.textContent = "Career";
         hideOrbs();
-        let randomPhrase = getRandomInt(4);
+        let randomPhrase = getRandomInt(5);
         let randomWord  = careerAdviceWords[getRandomInt(careerAdviceWords.length-1)];
         randomWord.toLowerCase();
         let randomWord2  = careerAdviceWords[getRandomInt(careerAdviceWords.length-1)]; 
@@ -280,11 +280,10 @@ function makeString(){
                 output.textContent = "Finding balance between your" + randomVerb + " and " + randomWord2 + "is crucial for success in your career.";
                 return;
             case 3:
-<<<<<<< HEAD
                 output.textContent = "You are not gonna succeed practice with " +  randomWord2 + " and " + randomVerb + ".";
-=======
+                return;
+            case 4:
                 output.textContent = "Paying  off your " + randomWord + " is essential in preventing blood sucking debt collectors";
->>>>>>> refs/remotes/origin/main
                 return;
         }
     }else if(command == "Life  Advice"){
