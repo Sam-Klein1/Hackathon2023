@@ -41,16 +41,18 @@ a {
   border: 1px solid #888;
   width: 80%;
   text-align: center;
+  border-radius: 5px;
 }
 
 .modal-content h1 {
   font-size: 48px;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 }
 
 .modal-content P {
   font-family: 'Times New Roman', Times, serif;
-  margin-bottom: 10em;
+  margin-bottom: 4em;
+  font-size: 24px;
 }
 
 .modal-content button {
@@ -104,7 +106,7 @@ nav .right-header a {
   margin: 1.25em;
 }
 
-video {
+#shaman {
   display: block;
   margin: 2% auto;
 }
@@ -152,7 +154,7 @@ video {
   display: inline-block;
   position: absolute;
   top: 20%;
-  left: 2%;
+  left: 20%;
   -webkit-animation-name: bounce;
           animation-name: bounce;
   -webkit-animation-timing-function: ease-in-out;
@@ -169,7 +171,7 @@ video {
   display: block;
   position: absolute;
   top: 50%;
-  left: 2%;
+  left: 20%;
   -webkit-animation-name: bounce;
           animation-name: bounce;
   -webkit-animation-timing-function: ease-in-out;
@@ -186,7 +188,7 @@ video {
   display: block;
   position: absolute;
   top: 80%;
-  left: 2%;
+  left: 20%;
   -webkit-animation-name: bounce;
           animation-name: bounce;
   -webkit-animation-timing-function: ease-in-out;
@@ -203,7 +205,7 @@ video {
   display: block;
   position: absolute;
   top: 20%;
-  left: 85%;
+  left: 65%;
   -webkit-animation-name: bounce;
           animation-name: bounce;
   -webkit-animation-timing-function: ease-in-out;
@@ -220,7 +222,7 @@ video {
   display: block;
   position: absolute;
   top: 50%;
-  left: 85%;
+  left: 65%;
   -webkit-animation-name: bounce;
           animation-name: bounce;
   -webkit-animation-timing-function: ease-in-out;
@@ -237,7 +239,7 @@ video {
   display: block;
   position: absolute;
   top: 80%;
-  left: 85%;
+  left: 65%;
   -webkit-animation-name: bounce;
           animation-name: bounce;
   -webkit-animation-timing-function: ease-in-out;
@@ -272,6 +274,7 @@ video {
   margin: 1em auto;
   font-size: 18px;
   display: none;
+  padding: 0.5em;
 }
 
 .lightning {

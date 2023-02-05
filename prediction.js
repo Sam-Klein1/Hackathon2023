@@ -71,7 +71,7 @@ let financialWords = [
     "Bear market"
 ]
 // list of CareerAdviceWords
-let carrerAdviceWords = [
+let careerAdviceWords = [
     "great work",
     "I'm possible",
     "don't stop",
@@ -112,7 +112,6 @@ let careerAdviceVerbs = [
    "furthered",
    "improved"
 ]
-<<<<<<< HEAD
 
 //list of Friendship verbs
 let friendVerbs = [
@@ -142,7 +141,6 @@ let friendWords = [
     "lasting"
 ]
 
-=======
 //List of school advice
 let schoolWords = [
     "study",
@@ -153,7 +151,10 @@ let schoolWords = [
     "sleep in",
     "read",
     "pretend to work",
-    "HELP, I'M STuc..."
+    "HELP, I'M STuc...",
+    "breakdown",
+    "explore",
+    "fake it"
 ]
 //List of clothing
 let clothingWords = [
@@ -161,7 +162,8 @@ let clothingWords = [
     "pants",
     "shoes",
     "shorts",
-    "dress"
+    "dress",
+    "hat"
 ]
 //List of clothing adjuctives
 let clothingAdj = [
@@ -196,7 +198,6 @@ let lifeWords = [
     "complaining",
     "HELP, I'M TRAPed.."
 ]
->>>>>>> refs/remotes/origin/main
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
@@ -277,13 +278,16 @@ retryBtn.addEventListener('click', function(){
     output.textContent = "";
     output.style.display = "none";
     retryBtn.style.display = "none";
+    updateImg(1);
 })
 
-function updateVideo(num){
+function updateImg(num){
     if(num == 1){
-        videoSource = "Sample Video.mp4";
+        let shamanImg = document.getElementById('shaman');
+        shamanImg.src = "imgs/FortuneTellingShamen.png";
     }else if(num == 2){
-        videoSource = "Wav2Lip/results/result_voice.mp4";
+        let shamanImg = document.getElementById('shaman');
+        shamanImg.src = "imgs/ShamenMouthOpen.png";
     }
     
 }
@@ -346,6 +350,7 @@ function makeString(){
         iterations: 1,
         fill: "forwards"
     })
+    updateImg(2);
     if(command == "Romantic  Advice"){
         hideOrbs();
         let randomPhrase = getRandomInt(4);
@@ -363,15 +368,9 @@ function makeString(){
                 output.textContent = "You shall fall head over heels for your " + randomWord + " love in the morning after yonder yester fortnight.";
                 return;
             case 3:
-<<<<<<< HEAD
-                output.textContent = "You will need to " + randomWord + " to " + randomWord2 ;
-                return;
-            
-=======
                 output.textContent = "Thy " + randomWord + " love shall be requited within the next " + getRandomInt(40) + " years.";
             case 4:
                 output.textContent = "Be wary of those in " + clothingAdj[getRandomInt(15)] + " " + clothingWords[getRandomInt(4)] + ", for one has a secret surprise for you.";
->>>>>>> refs/remotes/origin/main
         }
         
     }else if(command == "Financial  Advice"){
@@ -380,8 +379,6 @@ function makeString(){
         let randomPhrase = getRandomInt(4);
         let randomWord  = financialWords[getRandomInt(financialWords.length-1)];
         randomWord = randomWord.toLowerCase();
-        let randomWord  = schoolWords[getRandomInt(financialWords.length-1)];
-        randomWord.toLowerCase();
         let randomWord2  = financialWords[getRandomInt(financialWords.length-1)]; 
         randomWord2 = randomWord2.toLowerCase();
         console.log(randomPhrase);
@@ -402,7 +399,6 @@ function makeString(){
                 output.textContent = "The crypto market, evolving the field of " + randomWord + ", will set you free (of all your money).";
         }
     }else if(command == "Career  Advice"){
-        output.textContent = "Career";
         hideOrbs();
         let randomPhrase = getRandomInt(5);
         let randomWord  = careerAdviceWords[getRandomInt(careerAdviceWords.length-1)];
@@ -420,7 +416,7 @@ function makeString(){
                 output.textContent = "Your career is a" + randomWord2 + "not just a " + randomWord + " and it's up to you to chart " + randomWord + ".";
                 return;
             case 2:
-                output.textContent = "Finding balance between your" + randomVerb + " and " + randomWord2 + "is crucial for success in your career.";
+                output.textContent = "Finding balance between your " + randomVerb + " and " + randomWord2 + "is crucial for success in your career.";
                 return;
             case 3:
                 output.textContent = "You are not gonna succeed practice with " +  randomWord2 + " and " + randomVerb + ".";
@@ -430,31 +426,8 @@ function makeString(){
                 return;
         }
     }else if(command == "Life  Advice"){
-        output.textContent = "Life";
         hideOrbs();
-        let randomPhrase = getRandomInt(4);
-        let randomWord  = careerAdviceWords[getRandomInt(careerAdviceWords.length-1)];
-        randomWord = randomWord.toLowerCase();
-        let randomWord2  = careerAdviceWords[getRandomInt(careerAdviceWords.length-1)]; 
-        randomWord2 = randomWord2.toLowerCase();
-        let randomVerb  = careerAdviceVerbs[getRandomInt(careerAdviceVerbs.length-1)]; 
-        randomVerb = randomVerb.toLowerCase();
-        console.log(randomPhrase);
-        switch(randomPhrase){
-            case 0:
-                output.textContent = "Be sure to participate in company " + randomWord + " in order to  " + randomWord2 + " leading to promotion to CEO.";
-                return;
-            case 1:
-                output.textContent = "Always upskill on " + randomWord + " when "+ randomVerb + "ing to prevent major job loss syndrome(MJLS).";
-                return;
-            case 2:
-                output.textContent = "A team player always " + randomWord + "s and ensures  " + randomWord2 + " to maintain an extrememly unprofessional environment.";
-                return;
-            case 3:
-                    output.textContent = "Networking with others " + randomVerb + "s  your potiential to quit your job in a companies' most dire situations.";
-                    return;
-        }
-        let randomPhrase = getRandomInt(3);
+        let randomPhrase = getRandomInt(5);
         let randomWord  = lifeWords[getRandomInt(lifeWords.length-1)];
         randomWord.toLowerCase();
         let randomAdj = clothingAdj[getRandomInt(clothingAdj.length-1)];
@@ -465,15 +438,27 @@ function makeString(){
         switch(randomPhrase){
             case 0:
                 output.textContent = "Make sure to " + randomWord + " around others, they need that.";
+                
                 return;
             case 1:
                 output.textContent = "Next time you " + randomWord + " in " + randomClothes + ", expect a fulfilling day!";
+        
                 return;
             case 2:
                 output.textContent = "Life is like a Dallas Cowboys game, " + randomWord + " will make it better.";
+                
                 return;
             case 3:
                 output.textContent = "With enough " + randomWord + ", your day will be brighter!";
+                
+                return;
+            case 4:
+                output.textContent = "Practicing your normal routine of " + randomWord + " isn't a good idea";
+                
+                return;
+            case 5:
+                output.textContent = " Do more pratice of " + randomWord + " with " + randomWord2 + " to spice your life ";
+                
                 return;
         }
     }else if(command == "School  Advice"){
@@ -528,7 +513,7 @@ function makeString(){
                 output.textContent = "A true friend is someone who brings" + randomVerb + "and " + randomWord + ".";
                 return;
             case 4:
-                output.textContent = "Friendship is a"  + randomVerb  + " and " + randomWord2 + " that lasts a lifetime.";
+                output.textContent = "Friendship is a "  + randomVerb  + " and " + randomWord2 + " that lasts a lifetime.";
                 return;
             case 5:
                 output.textContent = "Friendship is not about " + randomWord + " and not about " + randomVerb + ".";
@@ -536,6 +521,7 @@ function makeString(){
             
         }
     }
+    
 } 
 
 for(let i = 0; i < orbs.length;i++){
