@@ -2,7 +2,9 @@ let orbs = document.getElementsByClassName('category-orb');
 let output = document.getElementById('output');
 let retryBtn = document.getElementById('retry-btn');
 let lightningSound = document.getElementById('Lightning');
+let loveSound = document.getElementById('Love');
 let lightnings = document.getElementsByClassName('lightning');
+let rose = document.getElementsByClassName('rose');
 let videoSource = document.getElementById('video-source');
 let romanticWords = [
     "adorable",
@@ -295,7 +297,19 @@ function makeString(){
 
     let command = this.getElementsByTagName("p")[0].textContent;
     console.log(command);
-
+    if(command == "Romantic  Advice"){
+        loveSound.play();
+        rose[0].animate([
+            // keyframes
+            { opacity: '0%' },
+            { opacity: '100%' },
+            { opacity: '0%' }
+        ], {
+            // timing options
+            duration: 3000,
+            iterations: 1
+        })
+    }else{
     lightningSound.play();
     lightnings[0].animate([
         // keyframes
@@ -307,26 +321,7 @@ function makeString(){
         duration: 800,
         iterations: 1
       })
-      lightnings[1].animate([
-        // keyframes
-        { opacity: '0%' },
-        { opacity: '100%' },
-        { opacity: '0%' }
-      ], {
-        // timing options
-        duration: 500,
-        iterations: 1
-      })
-      lightnings[2].animate([
-        // keyframes
-        { opacity: '0%' },
-        { opacity: '100%' },
-        { opacity: '0%' }
-      ], {
-        // timing options
-        duration: 700,
-        iterations: 1
-      })
+    }
     output.style.display = "block";
     output.animate([
             // keyframes

@@ -109,6 +109,16 @@ nav .right-header a {
 #shaman {
   display: block;
   margin: 2% auto;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 1.1s;
+          animation-duration: 1.1s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes bounce {
@@ -256,7 +266,7 @@ nav .right-header a {
   font-family: 'Courier New', Courier, monospace;
   color: black;
   font-weight: bold;
-  padding: 6em;
+  padding: 6em 10em;
   text-align: center;
   background-image: url(imgs/border.png);
   background-size: auto;
@@ -279,6 +289,17 @@ nav .right-header a {
 
 .lightning {
   opacity: 0;
+  z-index: 1;
+  position: absolute;
+  -webkit-transform: scale(3);
+          transform: scale(3);
+  top: 30%;
+  left: 45%;
+}
+
+.rose {
+  opacity: 0;
+  z-index: 1;
   position: absolute;
   -webkit-transform: scale(3);
           transform: scale(3);
